@@ -1,0 +1,16 @@
+{
+    "singleQuote": false,
+    "overrides": [
+        {
+            "files": ["*.tsx", "*.ts"],
+            "options": {
+                "singleQuote": true
+            }
+        }
+    ],
+    "trailingComma": "all",
+    "semi": true,
+    "bracketSpacing": true,
+    "tabWidth": 4,
+    "endOfLine": "auto"
+}
