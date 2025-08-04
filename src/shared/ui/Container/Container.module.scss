@@ -1,0 +1,16 @@
+@use "@/shared/assets/styles" as *;
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 528px;
+    min-height: 100vh;
+    row-gap: 32px;
+    margin: 0 auto;
+    padding: 16px 40px;
+
+    @include media-breakpoint-up(md) {
+        row-gap: 40px;
+        padding: 24px 0;
+    }
+}

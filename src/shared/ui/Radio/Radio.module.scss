@@ -1,0 +1,84 @@
+@use "@/shared/assets/styles" as *;
+
+@mixin transition {
+    transition: all 0.3s ease-in-out;
+}
+
+.wrapper {
+    @include transition;
+
+    width: 100%;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    column-gap: $spacing-md;
+    background-color: $color-light;
+    border: 1px solid $color-dark;
+    border-radius: $border-radius-xs;
+    cursor: pointer;
+    overflow: hidden;
+    padding-inline: $spacing-md;
+
+    &:has(.input:checked, .input:hover) {
+        border-color: $color-primary;
+        background-color: $color-primary;
+    }
+}
+
+.checkmark {
+    @include transition;
+
+    flex-shrink: 0;
+    display: block;
+    height: 20px;
+    width: 20px;
+    border: 1px solid $color-dark;
+    border-radius: $border-radius-lg;
+    position: relative;
+
+    &::after {
+        @include transition;
+
+        content: "";
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        background-color: $color-white;
+        border-radius: $border-radius-lg;
+    }
+}
+
+.label {
+    line-height: $lh-lg;
+
+    @include transition;
+    @include media-breakpoint-up(md) {
+        font-size: $fs-sm;
+        line-height: $lh-md;
+    }
+}
+
+.input {
+    @include visually-hidden;
+
+    &:checked,
+    &:hover {
+        ~ .checkmark {
+            border: 2px solid $color-white;
+
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        ~ .label {
+            color: $color-white;
+        }
+    }
+}

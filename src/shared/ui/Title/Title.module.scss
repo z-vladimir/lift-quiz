@@ -1,0 +1,13 @@
+@use "@/shared/assets/styles" as *;
+
+.title {
+    font-size: $fs-md;
+    line-height: $lh-md;
+    font-weight: $fw-black;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+        font-size: $fs-lg;
+        line-height: $lh-sm;
+    }
+}

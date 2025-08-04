@@ -1,0 +1,22 @@
+@use "@/shared/assets/styles" as *;
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+
+    @include media-breakpoint-up(md) {
+        gap: $spacing-xl;
+    }
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    @include media-breakpoint-up(md) {
+        gap: $spacing-md;
+    }
+}

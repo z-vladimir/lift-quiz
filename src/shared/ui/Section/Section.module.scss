@@ -1,0 +1,13 @@
+@use "@/shared/assets/styles" as *;
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+        gap: $spacing-xl;
+    }
+}

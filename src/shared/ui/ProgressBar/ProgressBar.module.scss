@@ -1,0 +1,44 @@
+@use "@/shared/assets/styles" as *;
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: $spacing-sm;
+}
+
+.label {
+    font-size: $fs-xs;
+    font-weight: $fw-regular;
+}
+
+.content {
+    width: 100%;
+    height: 8px;
+    border-radius: $border-radius-sm;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress {
+    display: block;
+    width: 100%;
+    height: 8px;
+    background-color: $color-primary;
+    border-radius: $border-radius-sm;
+    z-index: $ui-index-2;
+    transition: width 0.3s ease-in-out;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background-color: $color-secondary;
+        border-radius: $border-radius-sm;
+        z-index: $ui-index-1;
+    }
+}

@@ -24,6 +24,7 @@ export default tseslint.config([
             "simple-import-sort": simpleImportSort,
         },
         rules: {
+            "react-hooks/exhaustive-deps": "off",
             "simple-import-sort/imports": [
                 "error",
                 {
@@ -36,7 +37,6 @@ export default tseslint.config([
                         // Internal packages.
                         ["^@(/.*|$)"],
                         ["^@/.*/store(/.*|$)"],
-                        ["^@/.*/components(/.*|$)"],
                         ["^@/.*/ui(/.*|$)"],
                         ["^@/.*/lib(/.*|$)"],
                         ["^@/.*/utils(/.*|$)"],
@@ -47,6 +47,7 @@ export default tseslint.config([
                         ["^@/.*/types(/.*|$)"],
                         ["^@/.*/consts(/.*|$)"],
                         ["^@/.*/api(/.*|$)"],
+                        ["^@/.*/components(/.*|$)"],
                         ["^@/.*/assets(/.*|$)"],
                         // public | types | components | global styles (assets)
                         ["^/public(/.*|$)"],

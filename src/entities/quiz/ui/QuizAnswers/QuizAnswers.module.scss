@@ -1,0 +1,11 @@
+@use "@/shared/assets/styles" as *;
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    @include media-breakpoint-up(md) {
+        gap: $spacing-md;
+    }
+}
